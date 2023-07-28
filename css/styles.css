@@ -599,7 +599,7 @@ a {
 
 .block {
     --padding-vertical: 6rem; /* This custom property is available to an element with the class of block and all of its children. */
-    padding: var(--padding-vertical) 2rem; /* V H */     
+    padding: var(--padding-vertical) 2rem; /* V H */  
 }
 
 .block__header {
@@ -631,6 +631,72 @@ a {
 
 
 .container {
-    max-width: 1140px;
+    max-width: 1140px;  
     margin: 0 autO; /* V H */
+}
+
+
+/* Navigation Bar */
+
+.nav {
+    background: #000;
+    display: flex; /*By default, flex direction is horizontal so great*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.nav__list {
+    width: 100%;
+    margin: 0;
+}
+
+.nav__item {
+    padding: 0.5rem 2rem; /* V H */
+    border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+    color: #d2d0db;
+    transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+    color: #fff;
+}
+
+.nav__toggler {
+    opacity: 0.5;
+    transition: box-shadow .15s;
+    cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler{
+    opacity: 1;
+    box-shadow: 0 0 0 3px #667;
+    border-radius: 5px;
+}
+
+.nav__brand {
+    transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+    .nav__toggler{
+        display: none;
+    }
+    
+    .nav__list {
+        width: auto;
+        display: flex;
+        font-size: 1.6rem;
+        max-height: 100%;
+        opacity: 1;
+    }
+
+    .nav__item {
+        padding: 0.5rem 2rem; /* V H */
+        border: 0;
+    }
 }
