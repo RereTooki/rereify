@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <header>
@@ -29,14 +30,14 @@
         <section class="block block--dark block--skewed-left hero">
             <div class="container grid grid--1x2">
                 <header class="block__header hero__content"> <!--Generic classes first then specialized classes to override necessary styles in the generic classes--> 
-                    <h1 class="block__heading">Cloud Hosting for Pros</h1>
+                    <h1 data-aos="fade-right" class="block__heading">Cloud Hosting for Pros</h1>
                     <p class="hero__tagline">Deploy your websites in less than 60 seconds.</p>
                     <a href="" class="btn btn--accent btn--stretched">Get Started</a>
                 </header>
-                <img class="hero__image" src="images/banner.png" alt="">
+                <img data-aos="zoom-in" class="hero__image" src="images/banner.png" alt="">
             </div>
         </section>
-        <section class="block container block-domain">
+        <section data-aos="fade-up" class="block container block-domain">
             <header class="block__header">
                 <h2>Starting at $9 per month</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, accusamus.</p>
@@ -57,7 +58,7 @@
                 <li>.xyz $10</li>
             </ul>       
         </section> 
-        <section class="block container block-plans">
+        <section data-aos="fade-up" class="block container block-plans">
             <div class="grid grid--1x3">
                 <div class="plan">
                     <div class="card card--secondary">
@@ -127,7 +128,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, perferendis?</p>
             </header>
             <article class="grid grid--1x2 feature">
-                <div class="feature__content">
+                <div class="feature__content" data-aos="fade-right">
                     <span class="icon-container">
                         <svg class="icon icon--primary">
                             <use xlink:href="images/sprite.svg#easy"></use>
@@ -137,7 +138,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae explicabo quae possimus inventore porro deleniti quod praesentium iure, esse suscipit.</p>
                     <a href="#" class="link-arrow">Learn More</a>
                 </div> 
-                <picture>
+                <picture data-aos="zoom-in-left">
                     <source type="image/webp" srcset="images/easy.webp 1x, images/easy@2x.webp 2x">
                     <source type="image/jpg" srcset="images/easy.jpg 1x, images/easy@2x.jpg 2x">
                     <img class="feature__image" src="images/easy@2x.jpg" alt="">
@@ -200,12 +201,12 @@
                 <h2>User-friendly Control Panel</h2>
             </header>
             <div class="container grid grid--1x2">
-                <picture class="block-showcase__image">
+                <picture data-aos="fade-right" class="block-showcase__image">
                     <source type="image/webp" scrcset="images/ipad.webp 1x, images/ipad@2x.webp 2x">
                     <source type="image/png" scrcset="images/ipad.png 1x, images/ipad@2x.png 2x">
                     <img src="images/ipad.png" alt=""/>
                 </picture>
-                <ul class="list">
+                <ul class="list" data-aos="fade-up">
                     <li>
                         <div class="media">
                             <div class="media__image">
@@ -248,7 +249,7 @@
                 </ul>                            
             </div>
         </section>
-        <section class="block">
+        <section class="block" data-aos="zoom-in">
             <header class="block__header">
                 <h2>What our Customers are Saying</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, sed.</p>
@@ -284,13 +285,15 @@
                 </div>
             </div>
         </section>
-        <div class="callout callout--primary">
-            <div class="grid grid--1x2">
-                <div class="callout__content">
-                    <h2 class="callout__heading">Ready to Get Started?</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At aut dolorum est quod voluptatibus rem veniam mollitia explicabo sint repudiandae?</p>
+        <div class="container">
+            <div class="callout callout--primary callout-signup">
+                <div class="grid grid--1x2">
+                    <div class="callout__content">
+                        <h2 class="callout__heading">Ready to Get Started?</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At aut dolorum est quod voluptatibus rem veniam mollitia explicabo sint repudiandae?</p>
+                    </div>
+                    <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
                 </div>
-                <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
             </div>
         </div>
         <footer class="block block--dark footer">
@@ -362,5 +365,9 @@
             </div>
         </footer>       
         <script src="js/main.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body> 
 </html>     
